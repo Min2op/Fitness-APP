@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436281427280",
+    "project_id": "lixx-bd4c6",
+    "storage_bucket": "lixx-bd4c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436281427280:android:5a1de2e7c630117f63d855",
+        "android_client_info": {
+          "package_name": "com.example.testing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436281427280-cop5fcgi4dpo47qpct3foovhglpmo0vf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQRBwOJ40_5xuxMksE5PwjTqrloth3Vv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436281427280-cop5fcgi4dpo47qpct3foovhglpmo0vf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
