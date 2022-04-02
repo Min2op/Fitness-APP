@@ -8,10 +8,11 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="214dp"
-        android:layout_height="315dp"
+        android:layout_width="157dp"
+        android:layout_height="128dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="147dp" />
+        tools:layout_editor_absoluteY="488dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
