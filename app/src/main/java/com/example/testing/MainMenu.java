@@ -22,17 +22,15 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class MainMenu extends AppCompatActivity {
-    User users = new User();
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    User RealUser;
+    FirebaseUser firebaseUseruser = FirebaseAuth.getInstance().getCurrentUser(); // Get the instance of firebase
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        User users = new User(); // New user
         super.onCreate(savedInstanceState);
         LoadUser();
-
-
         setContentView(R.layout.activity_main_menu);
         users = getIntent().getParcelableExtra("users");
-
         Button setupProfile = findViewById(R.id.profileSetup);
         Button bmiCacl = findViewById(R.id.bmiCalc);
         Button viewProfile = findViewById(R.id.viewProfile);
@@ -50,17 +48,17 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-
         bmiCacl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmiCacl.setText(user.getEmail());
+                bmiCacl.setText(firebaseUseruser.getEmail());
                 //openBmiCal();
             }
         });
     }
-    private void openBmiCal() {
 
+    private void openBmiCal() {
+        //to be added
     }
     public void openProfileSetup(){
         Intent face = new Intent(this, profileSetup.class);
@@ -68,38 +66,42 @@ public class MainMenu extends AppCompatActivity {
     }
     public void openProfView(){
         Intent test = new Intent(this, profileView.class);
-        test.putExtra("users", users);
+        test.putExtra("users", RealUser);
         startActivity(test);
     }
     public void LoadUser(){
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        Query checkUser = reference.orderByChild("uid").equalTo(user.getUid());
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User"); //We are creating a reference at the Node User
+        Query checkUser = reference.orderByChild("uid").equalTo(firebaseUseruser.getUid()); //The child node of user is the users UID we check this
 
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
+                if(snapshot.exists()){  //If there is a UID that matches the firebase user then we have a profile to get data from
+                    User tempUser = new User();
+                    String nameFromSnap = snapshot.child(firebaseUseruser.getUid()).child("name").getValue(String.class);
+                    Integer ageFromSnap = snapshot.child(firebaseUseruser.getUid()).child("age").getValue(Integer.class);
+                    Double heightFromSnap = snapshot.child(firebaseUseruser.getUid()).child("height").getValue(Double.class);
+                    Double weightFromSnap = snapshot.child(firebaseUseruser.getUid()).child("weight").getValue(Double.class);
+                    Double bmiFromSnap = snapshot.child(firebaseUseruser.getUid()).child("bmi").getValue(Double.class);
 
-                    String nameFromSnap = snapshot.child(user.getUid()).child("name").getValue(String.class);
-                    Integer ageFromSnap = snapshot.child(user.getUid()).child("age").getValue(Integer.class);
-                    Double heightFromSnap = snapshot.child(user.getUid()).child("height").getValue(Double.class);
-                    Double weightFromSnap = snapshot.child(user.getUid()).child("weight").getValue(Double.class);
+                    tempUser.setAge(ageFromSnap);
+                    tempUser.setName(nameFromSnap);
+                    tempUser.setbmi(bmiFromSnap);
+                    tempUser.setUID(firebaseUseruser.getUid());
+                    tempUser.setHeight(heightFromSnap);
+                    tempUser.setEmail(firebaseUseruser.getEmail());
+                    tempUser.setWeight(weightFromSnap);
+                    RealUser = tempUser;
 
-                    Button set = findViewById(R.id.bmiCalc);
-                    set.setText(ageFromSnap.toString());
-                    //users.setWeight(weightFromSnap);
-                    //users.setbmi(0.00);
-                    //users.setAge(ageFromSnap);
-                    //users.setName(nameFromSnap);
-                    //users.setHeight(heightFromSnap);
-
-                    Toast test = Toast.makeText(MainMenu.this, "Test" ,LENGTH_LONG);
+                    Toast test = Toast.makeText(MainMenu.this, "Profile Already in Place" ,LENGTH_LONG);
                     test.show();
                 }
                 else{
+                    //If there is no profile set up for this fire base user we direct them to theset up profile page
                     Intent intent = new Intent(MainMenu.this, profileSetup.class);
                     startActivity(intent);
                 }
+
             }
 
             @Override

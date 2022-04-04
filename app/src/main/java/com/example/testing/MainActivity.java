@@ -32,14 +32,14 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+//Sign in page dont mess with this
 public class MainActivity extends AppCompatActivity {
-    private SignInClient oneTapClient;
-    private BeginSignInRequest signUpRequest;
-    private static final int RC_SING_IN = 9001;
-    private static final String TAG = "GoogleActivity";
-    private FirebaseAuth mAuth;
-    private GoogleSignInClient gsc;
+    private SignInClient oneTapClient; //Google sign in api
+    private BeginSignInRequest signUpRequest; //Googgle sign in requrest api
+    private static final int RC_SING_IN = 9001; //Tag for signing in
+    private static final String TAG = "GoogleActivity"; // tag for actiivty
+    private FirebaseAuth mAuth; //setting up the authentiaction for firebase
+    private GoogleSignInClient gsc; //Googsignin
 
 
     @Override
@@ -63,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn();
-
             }
-
         });
     }
     public void openMainMenu(){
@@ -83,10 +81,8 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == RC_SING_IN){
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
             try {
                GoogleSignInAccount account = task.getResult(ApiException.class);
-                //Log.d(TAG, "FirebaseAuthWithGoogle" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
                 openMainMenu();
             } catch (ApiException e) {
@@ -98,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
-
-
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

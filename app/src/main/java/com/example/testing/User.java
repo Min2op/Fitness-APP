@@ -5,16 +5,23 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
+
+/*
+READ ME
+IF YOU ADD ANYTHING TO FIELDS OF CLASS
+THEN MAKE SURE TO left click on the parcelable next to implement on the class
+After this hit ALT+ENTER while highlighting over parcable and select replace parcable implementation
+ADD SETTERS AND GETTS ACCORDINGLY
+ */
 class User implements Parcelable {
-    private String UID;
+    private String UID; //This is for the main Identification in the data base
     private String Name;
     private Double Weight;
     private Double Height;
     private Integer Age;
     private String Email;
     private Double bmi;
-
-    User(){ }
+    User(){}
     protected User(Parcel in) {
         UID = in.readString();
         Name = in.readString();
