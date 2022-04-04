@@ -39,7 +39,7 @@ public class profileSetup extends AppCompatActivity{
     public void finished(){
         reference = rootNode.getReference("User"); //Here we assign reference to the Node User in the Json tree.
         /*
-        All this below is just writing the data from the textView fields into the data base
+        All this below is just writing the data from the text
          */
         User newUser = new User();
         EditText Age = findViewById(R.id.Age);
@@ -59,6 +59,7 @@ public class profileSetup extends AppCompatActivity{
         newUser.setHeight(s_height);
         newUser.setWeight(s_weight);
         newUser.setEmail(user.getEmail());
+        newUser.setbmi(0);
 
         reference.child(user.getUid()).setValue(newUser);
         Intent face = new Intent(profileSetup.this, MainMenu.class);
