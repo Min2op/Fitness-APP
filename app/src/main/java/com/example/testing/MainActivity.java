@@ -30,6 +30,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     private SignInClient oneTapClient;
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int RC_SING_IN = 9001;
     private static final String TAG = "GoogleActivity";
     private FirebaseAuth mAuth;
-    private  GoogleSignInClient gsc;
+    private GoogleSignInClient gsc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         GoogleSignInOptions GSO = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken(getString(R.string.defualt_web_client_id))
                 .requestEmail()
                 .build();
        gsc = GoogleSignIn.getClient(this, GSO);

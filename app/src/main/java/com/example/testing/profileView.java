@@ -16,7 +16,9 @@ public class profileView extends AppCompatActivity {
         User user = getIntent().getParcelableExtra("users");
 
         Button btn = findViewById(R.id.button);
+        Button btn2 = findViewById(R.id.button8);
         btn.setText(user.getName());
+        btn2.setText(user.getAge().toString());
 
     }
 }

@@ -1,19 +1,22 @@
 package com.example.testing;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
 class User implements Parcelable {
-    String Name;
+    private String UID;
+    private String Name;
     private Double Weight;
     private Double Height;
     private Integer Age;
-    User(){
+    private String Email;
+    private Double bmi;
 
-    }
-
+    User(){ }
     protected User(Parcel in) {
+        UID = in.readString();
         Name = in.readString();
         if (in.readByte() == 0) {
             Weight = null;
@@ -29,6 +32,12 @@ class User implements Parcelable {
             Age = null;
         } else {
             Age = in.readInt();
+        }
+        Email = in.readString();
+        if (in.readByte() == 0) {
+            bmi = null;
+        } else {
+            bmi = in.readDouble();
         }
     }
 
@@ -47,6 +56,7 @@ class User implements Parcelable {
     public void setName(String n){
         Name = n;
     }
+    public void setUID(String x){UID = x;}
     public void setWeight(Double w){
         Weight = w;
     }
@@ -56,15 +66,23 @@ class User implements Parcelable {
     public void setAge(Integer i){
         Age = i;
     }
+    public void setEmail(String n){Email = n;}
+    public void setbmi(double k) {
+        bmi = k;
+    }
     public String getName(){
         return Name;
     }
-    public Double getWeight(){
-        return Weight;}
-    public Double getHeight(){
-        return Height;}
-    public Integer getAge(){
-        return Age;}
+    public Double getWeight(){ return Weight;}
+    public Double getHeight(){ return Height;}
+    public Integer getAge(){ return Age;}
+    public String getEmail(){ return Email;}
+    public Double getBmi() {
+        return bmi;
+    }
+    public String getUID() {
+        return UID;
+    }
 
     @Override
     public int describeContents() {
@@ -72,7 +90,8 @@ class User implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(@NonNull Parcel parcel, int i) {
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(UID);
         parcel.writeString(Name);
         if (Weight == null) {
             parcel.writeByte((byte) 0);
@@ -91,6 +110,13 @@ class User implements Parcelable {
         } else {
             parcel.writeByte((byte) 1);
             parcel.writeInt(Age);
+        }
+        parcel.writeString(Email);
+        if (bmi == null) {
+            parcel.writeByte((byte) 0);
+        } else {
+            parcel.writeByte((byte) 1);
+            parcel.writeDouble(bmi);
         }
     }
 }
