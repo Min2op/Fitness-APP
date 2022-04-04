@@ -24,11 +24,13 @@
         android:id="@+id/profileSetup"
         android:layout_width="189dp"
         android:layout_height="197dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="220dp"
-        android:text="Set Up Profile"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="180dp"
+        android:text="Update Profile"
+        app:layout_constraintBottom_toTopOf="@+id/workoutsButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
 
     <Button
         android:id="@+id/viewProfile"
@@ -55,15 +57,16 @@
         app:layout_constraintVertical_bias="0.816" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="111dp"
         android:text="Main Menu"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.145" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,11 +14,19 @@ public class profileView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_view);
         User user = getIntent().getParcelableExtra("users");
+        TextView welcomeView = findViewById(R.id.profileWelcome);
+        TextView changeName = findViewById(R.id.profile_nameTorRep);
+        TextView changeHeight = findViewById(R.id.profile_heightToRep);
+        TextView changeAge = findViewById(R.id.profile_ageToRep);
+        TextView changeWeight = findViewById(R.id.profile_wegithToRep);
+        TextView changeBmi = findViewById(R.id.profile_bmiToRep);
+        welcomeView.setText("Welcome " + user.getEmail().toString());
+        changeName.setText(user.getName().toString());
+        changeAge.setText(user.getAge().toString());
+        changeHeight.setText(user.getHeight().toString());
+        changeWeight.setText(user.getWeight().toString());
+        changeBmi.setText(user.getBmi().toString());
 
-        Button btn = findViewById(R.id.button);
-        Button btn2 = findViewById(R.id.button8);
-        btn.setText(user.getName());
-        btn2.setText(user.getAge().toString());
 
     }
 }

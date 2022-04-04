@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_bmi_calc.xml" value="0.25" />
         <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_main_menu.xml" value="0.25" />
-        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_profile_setup.xml" value="0.2" />
-        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_profile_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_profile_setup.xml" value="0.1" />
+        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_profile_view.xml" value="0.33" />
         <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_testing_queries.xml" value="0.259963768115942" />
+        <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/activity_update_profile.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Users/lexto/AndroidStudioProjects/Testing2/app/src/main/res/layout/fragment_second.xml" value="0.121875" />
       </map>

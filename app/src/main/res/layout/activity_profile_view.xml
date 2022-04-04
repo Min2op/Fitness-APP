@@ -4,32 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#74C198"
     tools:context=".profileView">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="157dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginBottom="92dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/profileWelcome"
+        android:layout_width="388dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button8"
+    <TextView
+        android:id="@+id/profile_nameTorRep"
+        android:layout_width="169dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="172dp"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_ViewName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_wegithToRep"
+        android:layout_width="174dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:text="Weight"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_ViewWeight"
+        app:layout_constraintTop_toBottomOf="@+id/profile_ageToRep" />
+
+    <TextView
+        android:id="@+id/profile_ViewHeight"
+        android:layout_width="172dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Height"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_ViewWeight" />
+
+    <TextView
+        android:id="@+id/profile_ViewBmi"
+        android:layout_width="169dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:text="BMI"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_ViewHeight" />
+
+    <TextView
+        android:id="@+id/profile_ageToRep"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Age"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_ViewAge"
+        app:layout_constraintTop_toBottomOf="@+id/profile_nameTorRep" />
+
+    <TextView
+        android:id="@+id/profile_ViewName"
+        android:layout_width="169dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_heightToRep"
+        android:layout_width="166dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:text="Height"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_ViewHeight"
+        app:layout_constraintTop_toBottomOf="@+id/profile_wegithToRep" />
+
+    <TextView
+        android:id="@+id/profile_bmiToRep"
         android:layout_width="157dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginBottom="244dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="67dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="BMI"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_ViewBmi"
+        app:layout_constraintTop_toBottomOf="@+id/profile_heightToRep" />
+
+    <TextView
+        android:id="@+id/profile_ViewWeight"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="Weight"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_ViewAge" />
+
+    <TextView
+        android:id="@+id/profile_ViewAge"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="Age"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_ViewName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

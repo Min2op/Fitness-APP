@@ -44,21 +44,26 @@ public class MainMenu extends AppCompatActivity {
         setupProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            openProfileSetup();
+            openUpdateProfileSetup();
 
             }
         });
         bmiCacl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmiCacl.setText(firebaseUseruser.getEmail());
-                //openBmiCal();
+                openBmiCal();
             }
         });
     }
 
     private void openBmiCal() {
-        //to be added
+        Intent intent = new Intent(MainMenu.this, bmiCalc.class);
+        intent.putExtra("users", RealUser);
+        startActivity(intent);
+        }
+    public void openUpdateProfileSetup(){
+        Intent intent = new Intent(this, Update_Profile.class);
+        startActivity(intent);
     }
     public void openProfileSetup(){
         Intent face = new Intent(this, profileSetup.class);
