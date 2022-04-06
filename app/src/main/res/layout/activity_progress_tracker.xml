@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".progressTracker">
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/firstChart"
+        android:layout_width="358dp"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TableLayout
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="28dp"
+        android:background="#96c896"
+        android:layerType="none"
+        android:touchscreenBlocksFocus="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstChart"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Weight (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="80.5 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="80.3 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 3"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="80.1 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 4"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="79.8 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 5"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="79.6 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 6"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="79.4 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="Day 7"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="match_parent"
+                android:padding="5dip"
+                android:text="79.0 (Kg)"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

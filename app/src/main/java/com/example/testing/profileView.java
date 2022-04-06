@@ -20,7 +20,7 @@ public class profileView extends AppCompatActivity {
         TextView changeAge = findViewById(R.id.profile_ageToRep);
         TextView changeWeight = findViewById(R.id.profile_wegithToRep);
         TextView changeBmi = findViewById(R.id.profile_bmiToRep);
-        welcomeView.setText("Welcome " + user.getEmail().toString());
+        welcomeView.setText(user.getEmail().toString());
         changeName.setText(user.getName().toString());
         changeAge.setText(user.getAge().toString());
         changeHeight.setText(user.getHeight().toString());

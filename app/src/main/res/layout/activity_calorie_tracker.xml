@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalorieTracker">
+
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="140dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="0"
+        />
+
+    <EditText
+        android:id="@+id/calorieChanger"
+        android:layout_width="352dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:background="@color/design_default_color_primary"
+        android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+        android:drawablePadding="15dp"
+        android:hint="            Enter calories"
+        android:padding="28dp"
+        android:textColor="@color/white"
+        android:textColorHint="#F5F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_Bar" />
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_Bar"
+        app:layout_constraintEnd_toEndOf="@+id/progress_Bar"
+        app:layout_constraintStart_toStartOf="@+id/progress_Bar"
+        app:layout_constraintTop_toTopOf="@+id/progress_Bar"
+        tools:text="60%"
+        tools:textSize="25dp"
+        />
+
+    <Button
+        android:id="@+id/resetCalorieTracker"
+        android:layout_width="127dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
+        android:text="Reset Tracker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieChanger" />
+
+    <Button
+
+        android:id="@+id/increasTracker"
+        android:layout_width="127dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="72dp"
+        android:text="Add 200Kcal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieChanger" />
+
+    <TextView
+        android:id="@+id/caloriesRemaining"
+        android:layout_width="355dp"
+        android:layout_height="59dp"
+        android:text="Calories Remaining"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/caloriesRemainingValue"
+        android:layout_width="355dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="44dp"
+        android:text=""
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

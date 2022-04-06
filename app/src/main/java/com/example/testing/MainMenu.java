@@ -2,14 +2,14 @@ package com.example.testing;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,6 +34,8 @@ public class MainMenu extends AppCompatActivity {
         Button setupProfile = findViewById(R.id.profileSetup);
         Button bmiCacl = findViewById(R.id.bmiCalc);
         Button viewProfile = findViewById(R.id.viewProfile);
+        Button progressTracker = findViewById(R.id.workoutsButton);
+        Button calorieTracker = findViewById(R.id.calorieTrackerMenuBtn);
 
         viewProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,21 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openBmiCal();
+            }
+        });
+
+        progressTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, progressTracker.class);
+                startActivity(intent);
+            }
+        });
+        calorieTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, CalorieTracker.class);
+                startActivity(intent);
             }
         });
     }
@@ -96,6 +113,7 @@ public class MainMenu extends AppCompatActivity {
                     tempUser.setHeight(heightFromSnap);
                     tempUser.setEmail(firebaseUseruser.getEmail());
                     tempUser.setWeight(weightFromSnap);
+                    tempUser.setbmi(bmiFromSnap);
                     RealUser = tempUser;
 
                     Toast test = Toast.makeText(MainMenu.this, "Profile Already in Place" ,LENGTH_LONG);

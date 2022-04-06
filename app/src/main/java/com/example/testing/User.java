@@ -21,7 +21,9 @@ class User implements Parcelable {
     private Integer Age;
     private String Email;
     private Double bmi;
-    User(){}
+    User(){
+
+    }
     protected User(Parcel in) {
         UID = in.readString();
         Name = in.readString();

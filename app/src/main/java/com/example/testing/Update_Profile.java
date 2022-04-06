@@ -57,7 +57,7 @@ public class Update_Profile extends AppCompatActivity {
         newUser.setHeight(s_height);
         newUser.setWeight(s_weight);
         newUser.setEmail(user.getEmail());
-        newUser.setbmi(0);
+        newUser.setbmi(0.00);
 
         reference.child(user.getUid()).setValue(newUser);
         Intent face = new Intent(Update_Profile.this, MainMenu.class);
