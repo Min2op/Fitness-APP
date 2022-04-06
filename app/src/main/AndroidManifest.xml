@@ -12,6 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testing">
         <activity
+            android:name=".CalorieTracker"
+            android:exported="false" />
+        <activity
+            android:name=".progressTracker"
+            android:exported="false" />
+        <activity
+            android:name=".weightTracker"
+            android:exported="false"
+            android:label="@string/title_activity_weight_tracker"
+            android:theme="@style/Theme.Testing.NoActionBar" />
+        <activity
             android:name=".bmiCalc"
             android:exported="false" />
         <activity

@@ -1,11 +1,12 @@
 package com.example.testing;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,14 +37,20 @@ public class bmiCalc extends AppCompatActivity {
                 Double Bmi, Height, Weight;
                 Weight = RealUser.getWeight();
                 Height = RealUser.getHeight();
-                Bmi = (Weight/ Height/Height)*10000;
+                Bmi = (Weight / Height / Height) * 10000;
                 Bmi = (double) Math.round(Bmi * 100) / 100;
                 read.setText(Bmi.toString());
                 RealUser.setbmi(Bmi);
 
-                reference.child(user.getUid()).setValue(RealUser);
+                Intent face = new Intent(bmiCalc.this, MainMenu.class);
+                startActivity(face);
+
+
             }
 
-    });
+
+        });
+
+    }
 }
-}
+
