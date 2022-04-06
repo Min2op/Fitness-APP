@@ -31,16 +31,19 @@ public class bmiCalc extends AppCompatActivity {
         Button event = findViewById(R.id.calcualteBmi);
 
 
+
         event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Double Bmi, Height, Weight;
                 Weight = RealUser.getWeight();
                 Height = RealUser.getHeight();
-                Bmi = (Weight / Height / Height) * 10000;
+                Bmi = (Weight/ Height/Height)*10000;
                 Bmi = (double) Math.round(Bmi * 100) / 100;
                 read.setText(Bmi.toString());
                 RealUser.setbmi(Bmi);
+
+                reference.child(user.getUid()).setValue(RealUser);
 
                 Intent face = new Intent(bmiCalc.this, MainMenu.class);
                 startActivity(face);
@@ -49,8 +52,15 @@ public class bmiCalc extends AppCompatActivity {
             }
 
 
-        });
+
+
+
+
+
+
+    });
 
     }
+
 }
 
