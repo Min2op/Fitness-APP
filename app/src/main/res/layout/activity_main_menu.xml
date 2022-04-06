@@ -48,7 +48,7 @@
         android:id="@+id/workoutsButton"
         android:layout_width="189dp"
         android:layout_height="197dp"
-        android:text="Workouts"
+        android:text="View Progress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/viewProfile"
         app:layout_constraintHorizontal_bias="0.074"
