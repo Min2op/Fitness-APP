@@ -28,8 +28,8 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         User users = new User(); // New user
         super.onCreate(savedInstanceState);
-        LoadUser();
         setContentView(R.layout.activity_main_menu);
+        LoadUser();
         users = getIntent().getParcelableExtra("users");
         Button setupProfile = findViewById(R.id.profileSetup);
         Button bmiCacl = findViewById(R.id.bmiCalc);
