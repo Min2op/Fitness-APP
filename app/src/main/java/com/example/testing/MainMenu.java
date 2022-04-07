@@ -105,7 +105,7 @@ public class MainMenu extends AppCompatActivity {
                     Double heightFromSnap = snapshot.child(firebaseUseruser.getUid()).child("height").getValue(Double.class);
                     Double weightFromSnap = snapshot.child(firebaseUseruser.getUid()).child("weight").getValue(Double.class);
                     Double bmiFromSnap = snapshot.child(firebaseUseruser.getUid()).child("bmi").getValue(Double.class);
-
+                //comment
                     tempUser.setAge(ageFromSnap);
                     tempUser.setName(nameFromSnap);
                     tempUser.setbmi(bmiFromSnap);
